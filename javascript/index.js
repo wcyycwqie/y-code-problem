@@ -185,4 +185,74 @@ $("#answer").click(function () {
 
   }
   qust8()
+
+
+  console.log('九、罗马数字转换');
+  const qust9 = () => {
+    console.log('罗马数字包含以下七种字符: I， V， X， L，C，D 和 M。');
+    const $inVal = $("#question").val();
+    let strArr = $inVal.split('')
+    let rNum = 0
+
+    function numFilter(s) {
+      switch (s) {
+        case 'I':
+          return 1
+          break;
+        case 'V':
+          return 5
+          break;
+        case 'X':
+          return 10
+          break;
+        case 'L':
+          return 50
+          break;
+        case 'C':
+          return 100
+          break;
+        case 'D':
+          return 500
+          break;
+        case 'M':
+          return 1000
+          break;
+        default:
+          return 0
+          break;
+      }
+    }
+    strArr.reduce((pre, cur, index) => {
+      if (pre == 'I' && cur == 'V' || pre == 'I' && cur == 'X') {
+        rNum += (numFilter(cur) - 2 * numFilter(pre))
+      } else if (pre == 'X' && cur == 'L' || pre == 'X' && cur == 'C') {
+        rNum += (numFilter(cur) - 2 * numFilter(pre))
+      } else if (pre == 'C' && cur == 'D' || pre == 'C' && cur == 'M') {
+        rNum += (numFilter(cur) - 2 * numFilter(pre))
+      } else {
+        rNum += numFilter(cur)
+      }
+      return cur
+    }, strArr[0])
+    console.log(rNum);
+
+  }
+  // qust9()
+
+  console.log('十、有效的括号');
+  const qust10 = () => {
+    const $inVal = $("#question").val();
+    let strArr = $inVal.split('')
+    let result = $inVal
+    while (result.indexOf('{}') >= 0 || result.indexOf('[]') >= 0 || result.indexOf('()') >= 0) {
+      result = result.replace('{}', '')
+      result = result.replace('[]', '')
+      result = result.replace('()', '')
+    }
+    console.log(result);
+    return result == ''
+  }
+  // qust10();
+
+  console.log('over');
 });
