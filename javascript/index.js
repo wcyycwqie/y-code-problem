@@ -1,9 +1,12 @@
-/**
- * .
- * @authors YYM
- * @date    2019-03-15 16:35:50
- * @version $Id$
+/*
+ * @Author: YYM
+ * @Date: 2022-12-02 17:41:48
+ * @LastEditors: YYM
+ * @LastEditTime: 2022-12-03 15:52:37
+ * @FilePath: \y-code-problem\javascript\index.js
+ * @FileDescribe: Code Problem
  */
+
 $('#answer').click(function () {
   console.log('answer')
   const g_input = document.getElementById('question').value
@@ -219,13 +222,13 @@ $('#answer').click(function () {
   }
   // qust8()
 
-  /* 
-  字符串压缩。利用字符重复出现的次数，编写一种方法，实现基本的字符串压缩功能。
-  比如，字符串aabcccccaaa会变为a2b1c5a3。若“压缩”后的字符串没有变短，则返回原先的字符串。
-  你可以假设字符串中只包含大小写英文字母（a至z）。
+  /** 
+  * 字符串压缩。利用字符重复出现的次数，编写一种方法，实现基本的字符串压缩功能。
+  * 比如，字符串aabcccccaaa会变为a2b1c5a3。若“压缩”后的字符串没有变短，则返回原先的字符串。
+  * 你可以假设字符串中只包含大小写英文字母（a至z）。
   */
   const qust9 = () => {
-    console.log('九、字符串压缩')
+    console.log('字符串压缩')
     let str = 'aabcccccaa'
     let arr = str.split('')
     arr.push('*')
@@ -299,7 +302,7 @@ $('#answer').click(function () {
    * 罗马数字包含以下七种字符: I， V， X， L，C，D 和 M。
    */
   const qust12 = () => {
-    console.log('九、罗马数字转换');
+    console.log('罗马数字转换');
     const $inVal = $("#question").val();
     let strArr = $inVal.split('')
     let rNum = 0
@@ -353,7 +356,7 @@ $('#answer').click(function () {
    * @returns 
    */
   const qust13 = () => {
-    console.log('十、有效的括号');
+    console.log('有效的括号');
     const $inVal = $("#question").val();
     let strArr = $inVal.split('')
     let result = $inVal
