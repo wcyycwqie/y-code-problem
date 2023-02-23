@@ -1,8 +1,8 @@
 /*
  * @Author: YYM
  * @Date: 2022-12-02 17:41:48
- * @LastEditors: YYM
- * @LastEditTime: 2022-12-03 15:52:37
+ * @LastEditors: Chaoyue
+ * @LastEditTime: 2022-12-09 17:30:37
  * @FilePath: \y-code-problem\javascript\index.js
  * @FileDescribe: Code Problem
  */
@@ -12,7 +12,7 @@ $('#answer').click(function () {
   const g_input = document.getElementById('question').value
   function qust1 () {
     /* 屏蔽身份证号码、手机号码，只保留后四位数字  */
-    console.log('一、屏蔽身份证号码、手机号码，只保留后四位数字')
+    console.log('屏蔽身份证号码、手机号码，只保留后四位数字')
     var ipid = document.getElementById('question').value
     console.log(myInput)
     if (ipid.length <= 4) {
@@ -33,7 +33,7 @@ $('#answer').click(function () {
 
   /* 筛选出不同的数字 */
   function qust2 () {
-    console.log('二、筛选出不同的数字')
+    console.log('筛选出不同的数字')
     var number = [2, 2, 2, 2, 3, 2, 2, 2, 2]
     var singleNumber
     // statement
@@ -54,7 +54,7 @@ $('#answer').click(function () {
 
   /* 排序输出最大最小值 */
   function qust3 () {
-    console.log('三、排序输出最大最小值')
+    console.log('排序输出最大最小值')
     let number = '1 2 10 8 3'
     var nmbarr = number.split(' ')
     var numarr0 = [1, 5, 46, 123, 3]
@@ -69,7 +69,7 @@ $('#answer').click(function () {
 
   /* 字符串筛选出大写字符的序号 */
   function qust4 () {
-    console.log('四、字符串筛选出大写字符的序号')
+    console.log('字符串筛选出大写字符的序号')
     console.log(/[A-Z]/.test('G'))
     let str = $('#question').val()
     let strArr = str.split('')
@@ -93,7 +93,7 @@ $('#answer').click(function () {
 
   /* 数字每一位数求和 */
   let qust5 = function () {
-    console.log('五、数字每一位数求和')
+    console.log('数字每一位数求和')
     let input = document.querySelector('#question').value
     console.log(input)
     let str = input.toString()
@@ -140,7 +140,7 @@ $('#answer').click(function () {
 
   /* 去除数组内相同的元素 */
   const qust6 = function () {
-    console.log('六、去除数组内相同的元素')
+    console.log('去除数组内相同的元素')
     let arr1 = [2, 1, 0, 2, 2, 3, 4, 3, 5]
     let arr2 = [2, 3, 2, 2, 4, 2, 6]
     let arrN1 = arr1
@@ -168,7 +168,7 @@ $('#answer').click(function () {
 
   /* 二进制数的1出现相同的次数 */
   const qust7 = function () {
-    console.log('七、二进制数的1出现相同的次数')
+    console.log('二进制数的1出现相同的次数')
     let $inputValue = $('#question').val()
     let $n = parseInt($inputValue).toString(2)
     var num = 0
@@ -191,7 +191,7 @@ $('#answer').click(function () {
    整个网格被水完全包围，但其中恰好有一个岛屿（或者说，一个或多个表示陆地的格子相连组成的岛屿）。
    */
   const qust8 = function () {
-    console.log('八、岛屿的周长')
+    console.log('岛屿的周长')
     let island_arr = [
       [0, 1, 0, 0],
       [1, 1, 1, 0],
@@ -276,7 +276,6 @@ $('#answer').click(function () {
     return str
   }
   // qust10()
-
 
   /**
    * 回文数
@@ -369,6 +368,15 @@ $('#answer').click(function () {
     return result == ''
   }
   // qust13();
+
+  /**
+   * 移除元素。 原地 移除所有数值等于 val 的元素，并返回移除后数组的新长
+   * @return {string}
+   */
+  const qust14 = () => {
+    let str = "Mr John Smith    "
+    
+  }
 
 
 })
